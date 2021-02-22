@@ -11,7 +11,7 @@ import Button from './Button';
     return (
         <>
             <nav className="Navbar">
-               <Link to="/" className="nav-logo">MICHAEL
+               <Link to='/' className="nav-logo">MICHAEL
                </Link>
                <div className="menu-icon" onClick={handleClick}>
                   <i className={click ? 'fas fa-times': 'fas fa-bars' }>
@@ -30,8 +30,8 @@ import Button from './Button';
                   <li className='nav-item'>
                       <Link to='/' className='nav-links' onClick={closeMobileMenu}>Sale</Link>
                   </li>
-                  <li className='nav-item '>
-                      <Link to='/' className='nav-links-mobile' onClick={closeMobileMenu}>Sign up</Link>
+                  <li className='nav-item'>
+                      <Link to='/signup' className='nav-links-mobile' onClick={closeMobileMenu}>Sign up</Link>
                   </li>
                </ul>
                <form className='nav-search'>             

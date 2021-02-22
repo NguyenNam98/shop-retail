@@ -2,28 +2,19 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Navbar from './Navbar'
+import Signup from '../pages/Signup'
 
-export default function App() {
+export default function TopMenu() {
   return (
-    <Router>
-      <div>
+    <Router> 
         <Navbar/>
         <Switch>
-          <Route path="/">
-        
+          <Route path='/signup' exact component={Signup}>
           </Route>
-          <Route path="/users">
-         
-          </Route>
-          <Route path="/">
-          
-          </Route>
-        </Switch>
-      </div>
+        </Switch>  
     </Router>
   );
 }
