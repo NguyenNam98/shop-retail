@@ -2,12 +2,15 @@ import React,{useState} from 'react'
 import  {Link}
    from "react-router-dom";
 import './Navbar.css';
-import Button from './Button';
+import Button from '../LoginButton/Button';
+import DropDown from '../Dropdown/Dropdown'
 
  function Navbar(){
      const[click,setClick]= useState(false);
      const handleClick=()=>setClick(!click);
      const closeMobileMenu=()=>setClick(false);
+
+     const [dropDown,setDropDown]=useState(false)
     return (
         <>
             <nav className="Navbar">
@@ -19,7 +22,15 @@ import Button from './Button';
                </div>           
                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                   <li className='nav-item'>
-                      <Link to='/' className='nav-links' onClick={closeMobileMenu}>Men</Link>
+                      <Link 
+                      to='/'
+                      className='nav-links' 
+                      onClick={closeMobileMenu}
+                      >
+                      Men
+                      <i className='fas fa-caret-down' />
+                      </Link>
+                      {dropDown&&{DropDown}}
                   </li>
                   <li className='nav-item'>
                       <Link to='/' className='nav-links' onClick={closeMobileMenu}>Women</Link>

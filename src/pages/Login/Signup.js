@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import "../App.css";
+import "./Signup.css"
+
 
 export default function Registration() {
-  const [emailReg, setEmailReg] = useState("");
-  const [passwordReg, setPasswordReg] = useState("");
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,14 +22,6 @@ export default function Registration() {
     });
   }
 
-  const register = () => {
-    Axios.post("http://localhost:3001/auth/register", {
-      email: emailReg,
-      password: passwordReg,
-    }).then((response) => {
-      console.log(response);
-    });
-  };
 
   const login = () => {
     Axios.post("http://localhost:3001/login", {
@@ -55,29 +46,11 @@ export default function Registration() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="registration">
-        <h1>Registration</h1>
-        <label>Email</label>
-        <input
-          type="text"
-          onChange={(e) => {
-            setEmailReg(e.target.value);
-          }}
-        />
-        <label>Password</label>
-        <input
-          type="text"
-          onChange={(e) => {
-            setPasswordReg(e.target.value);
-          }}
-        />
-        <button onClick={register}> Register </button>
-      </div>
-
-      <div className="login">
+    <div >
+      <div className="Container">
         <h1>Login</h1>
         <input
+          className="lg-input"
           type="text"
           placeholder="Email..."
           onChange={(e) => {
@@ -85,13 +58,34 @@ export default function Registration() {
           }}
         />
         <input
+          className="lg-input"
           type="password"
           placeholder="Password..."
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
-        <button onClick={login}> Login </button>
+        <div className="lg-check">
+          <label className="remember" >
+            <input type="checkbox"
+           
+            name="remember"
+          />     
+            Remember me
+          </label >
+          <label className="forgot-password">Forgotten your password?</label>
+        </div>
+        <button 
+          type="submit"
+          onClick={login}
+          className="lg-btn"
+        > 
+        Login 
+        </button>
+        
+        <div className="register">
+          <p>Not a member? <a href="#">Join us</a></p>
+        </div>
       </div>
       {loginStatus&&
       <button onClick={isUseAuth}>redirect</button>

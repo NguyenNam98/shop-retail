@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.Container{
+    width: 500px;
+    height: 60vh;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: blanchedalmond;
+    padding-top: 40px;
+}
+.lg-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .lg-btn{
+    background-color:#55acee;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .lg-btn:hover{
+      opacity: .8;
+  }
+  .lg-check{
+    display: flex;
+    justify-content: space-between;
+  }
+  .register{
+    text-align: center;
+  }
