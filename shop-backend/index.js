@@ -7,9 +7,11 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const session=require('express-session');
 const jwt = require('jsonwebtoken');
+const cors = require("cors");
 
 const userModel=require('./model/user.model');
-const cors = require("cors");
+var productRoutes = require('./routes/product.route');
+
 
 const app = express();
 app.use(
@@ -33,6 +35,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json()) // for parsing application/json;
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static('public'));
 
 app.use(
   session({
@@ -123,7 +127,7 @@ app.post("/login",async(req,res)=>{
    
   }
 })
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+
+app.use('/products',productRoutes);
+
 app.listen(3001)
