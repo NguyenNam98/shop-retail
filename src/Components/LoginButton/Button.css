@@ -11,6 +11,7 @@
     cursor: pointer;
     background-color: var(--primary);
     margin-right: 2rem;
+    
 }
 .btn:hover{
     padding: 6px 18px;

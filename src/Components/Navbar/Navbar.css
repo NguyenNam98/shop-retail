@@ -6,6 +6,8 @@
     align-items: center;
     font-size: 1.2rem;
     height: 80px;
+    position: relative;
+    
 }
 .nav-menu{
   display: flex;
@@ -33,6 +35,7 @@
   align-items: center;
   height: 80px;
  
+  
 }
 
 .nav-links {
@@ -50,7 +53,7 @@
  
  
   .fa-bars {
-    color: #fff;
+    color:black;
   }
   
   .nav-links-mobile {
@@ -59,119 +62,153 @@
   .menu-icon{
       display: none;
   }
+
   .nav-search{
       border:1px solid;
+      display: flex;
       background-color: #fff;
       border-radius: 10px;
       padding: auto;
       height: 35px;
       opacity: 0.3;
+      position: relative;
+    
   }
+  
   .nav-search:hover{
       opacity: 1;
       transition: all 0.5s ease;
   }
-  .nav-input{
+  .nav-input input{
       border:none;
       margin: 5px;
       font-size: 16px;
       outline: none;
   }
+  .nav-cart{
+    display: flex;
+    position: relative;
+  }
   .fa-search{
       color: black;
-      margin-top: 8px;
-      margin-right: 3px;
       cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+  }
+  .fa-caret-down{
+    display: none;
   }
  .cart{
      
-     color:white;
+     color:black;
      padding-left: 20px;
  }
  .favourite{
-     color: white;
+     color: black;
  }
-  @media screen and (max-width: 960px) {
+ .dropdown{
+   transition: 1s;
+}
+ /* .dropdown{
+   visibility: hidden;
+   transition: 0.1s;
+ }
+ .nav-item:hover .dropdown{
+   visibility: visible;
   
+ } */
+
+  @media screen and (max-width: 960px) {
+    .Navbar{
+      display: flex;
+      position:relative;
+      
+    }
     .nav-menu {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      height: 90vh;
+      width: 240px;
+      height: 100vh;
       position: absolute;
       top: 80px;
-      left: -110%;
+      left: -80%;
       opacity: 1;
       transition: all 0.5s ease;
+     
     }
-  
-    .nav-menu.active {
-      background: #242222;
-      left: auto;
-      opacity: 1;
-      width: 100%;
-      transition: all 0.5s ease;
+    .nav-menu.active{
+      left: -64px;
+      width: 240px;
+      flex-direction: column;
+      top: 80px;
+      position: absolute;
       z-index: 1;
-      
     }
-  
-    .nav-links {
-      text-align: center;
-      padding: 2rem;
+    .nav-links{
+     
       width: 100%;
-      display: table;
+     
     }
-  
     .nav-links:hover {
-      background-color: #1888ff;
-      border-radius: 0;
+      transition: all 0.2s ease-out;
+      border: 1px;
     }
-  
-    .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
-    }
-  
-    .menu-icon {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-  
-    .fa-times {
-      color: #fff;
-      font-size: 2rem;
-    }
-  
     .nav-links-mobile {
       display: block;
       text-align: center;
       padding: 1.5rem;
       margin: 2rem auto;
       border-radius: 4px;
-      width: 80%;
+      width: auto;
       background: #1888ff;
       text-decoration: none;
       color: #fff;
       font-size: 1.5rem;
     }
-  
-    .nav-links-mobile:hover {
-      background: #fff;
-      color: #1888ff;
-      transition: 250ms;
+   .nav-item{
+     display: flex;
+     position: relative;
+     top: auto;
+   }
+    .DropdownSlider{
+      display: none;
     }
-  
-    button {
+   
+    
+    
+    .favourite{
       display: none;
     }
     .nav-cart{
-        display: none;
+      position: absolute;
+      right: 20px;
+      font-size: 25px;
+    }
+    .nav-search{
+      display: none;
+    }
+    .fa-caret-down{
+      display:inline;
+      cursor: pointer;
+    }
+    Button{
+      display: none;
+    }
+    .fa-times {
+      color: black;
+      font-size: 2rem;
+    }
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+    .nav-logo{
+      position:absolute;
     }
   }

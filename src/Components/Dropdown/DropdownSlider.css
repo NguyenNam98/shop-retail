@@ -1,0 +1,27 @@
+.DropdownSlider {
+  overflow: hidden;
+  
+}
+
+.dropdownslider-container{
+  display: flex;
+}
+.dropdownslider-container img {
+  transition: transform 1s;
+}
+.dropdownslider-dot {
+  font-size: 8px;
+  color: #ddd;
+}
+.dropdownslider-dot {
+  display: flex;
+  justify-content: center;
+}
+.dropdownslider-dot div .icon {
+  margin: 0 5px;
+  margin-top: 10px;
+  
+}
+.active-dot {
+  color: #666;
+}
