@@ -8,6 +8,7 @@ import DropSlider from './DropdownSlider';
     const handleClick=()=>setClick(!click);
     
 return(
+    <div >
      <div className={click ?'dropdown-click':'dropdown'}>
         <div className="dropdown-container">
             {  
@@ -66,6 +67,7 @@ return(
                 />
             }
         </div> 
+     </div>
      </div>
  )
 }

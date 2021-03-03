@@ -124,8 +124,8 @@ import DropDown from '../Dropdown/Dropdown';
          })
      },[])
     return (
-        <>
-            <nav className="Navbar">
+        <div className='Navbar'>
+            <nav className="navbar-container">
                <Link to='/' className="nav-logo">MICHAEL
                </Link>
                <div className="menu-icon" onClick={handleClick}>
@@ -225,7 +225,7 @@ import DropDown from '../Dropdown/Dropdown';
                 <Button/>
                 
             </nav>
-        </>
+        </div>
     ) 
  }
  export default Navbar;

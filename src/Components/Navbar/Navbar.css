@@ -1,21 +1,32 @@
 .Navbar{
-    
-    color: black;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.Navbar :hover{
+  background-color: #fff;
+}
+.navbar-container{
     display: flex;
+    color: black;
     justify-content: space-around;
     align-items: center;
     font-size: 1.2rem;
     height: 80px;
-    position: relative;
+    width: 100%;
+    position: sticky;
     
 }
 .nav-menu{
   display: flex;
+  flex-direction: row;
   text-align: center;
   width: auto;
   justify-items: center;
   margin-right: 2rem;
   margin-left: 4rem;
+  
    
 }
 .nav-logo {
@@ -72,12 +83,14 @@
       height: 35px;
       opacity: 0.3;
       position: relative;
+      top: 3px;
     
   }
   
   .nav-search:hover{
       opacity: 1;
       transition: all 0.5s ease;
+      
   }
   .nav-input input{
       border:none;
@@ -150,10 +163,10 @@
       width: 100%;
      
     }
-    .nav-links:hover {
+    /* .nav-links:hover {
       transition: all 0.2s ease-out;
       border: 1px;
-    }
+    } */
     .nav-links-mobile {
       display: block;
       text-align: center;
@@ -166,6 +179,11 @@
       color: #fff;
       font-size: 1.5rem;
     }
+    .nav-links-mobile:hover{
+      background-color: cornflowerblue;
+      color:black;
+      font-size: 1.5rem;
+    }
    .nav-item{
      display: flex;
      position: relative;
@@ -174,9 +192,9 @@
     .DropdownSlider{
       display: none;
     }
-   
-    
-    
+    .dropdown-container{
+     justify-items: flex-start;
+   }
     .favourite{
       display: none;
     }

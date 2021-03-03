@@ -1,12 +1,20 @@
-import TopMenu from './Components/TopMenu'
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Home from './pages/Home/Home'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <TopMenu/>
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' exact component={Home}/>
+      </Switch>
+
+    </Router>
   );
 }
 
