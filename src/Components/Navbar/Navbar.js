@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import  {Link}
+import  {Link,withRouter}
    from "react-router-dom";
 import Axios from 'axios';
 import './Navbar.css';
@@ -228,4 +228,4 @@ import DropDown from '../Dropdown/Dropdown';
         </div>
     ) 
  }
- export default Navbar;
+ export default withRouter (Navbar);
