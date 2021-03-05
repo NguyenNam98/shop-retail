@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import '../../pages/Home/Home.css';
+import './HomeComponent.css';
 import b1 from '../../Assets/b1.jpg';
 import b2 from '../../Assets/b2.jpg';
 import b3 from '../../Assets/b3.jpg';
@@ -10,7 +10,7 @@ function HomeFeature(){
     return(
         <div className="HomeFeature flex-center">
             <div className="homefeature-container flex-center">
-                <div className="banner-box">
+                <div className="banner-box img-hover">
                     <img src={b1}  width="100%" height="100%"/>
                     <div className="black-box">
                         <div className="black-box-title">New Arrivals</div>

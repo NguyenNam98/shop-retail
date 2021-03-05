@@ -1,11 +1,13 @@
 .Navbar{
-  display: flex;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  
+  
+  z-index: 1000;
 }
 .Navbar :hover{
   background-color: #fff;
+  opacity: 1;
 }
 .navbar-container{
     display: flex;
@@ -15,7 +17,8 @@
     font-size: 1.2rem;
     height: 80px;
     width: 100%;
-  
+    background-color: #fff;
+    opacity: 0.9;
     
 }
 .nav-menu{
