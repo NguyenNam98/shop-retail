@@ -179,6 +179,9 @@
     font-family: sans-serif;
   
   }
+  .tab-loadmore-btn:hover {
+   opacity: 0.8;
+  }
   .tab-loadmore-loading {
     position: absolute;
     

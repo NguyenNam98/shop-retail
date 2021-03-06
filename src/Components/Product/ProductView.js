@@ -7,8 +7,10 @@ import './ProductComponent.css';
 
 function ProductView(props){
     const product=props.product;
+    
     const [hover,setHover]=useState(false);
     const [view, setView]=useState(false);
+
     const redirect = (target) => {
         window.scrollTo(0,0);
         props.history.push(`/products/${product._id}`);
@@ -25,6 +27,7 @@ function ProductView(props){
     } 
     let today=new Date();
     let productDate= new Date(product.productDate);
+    
     return(
        <div
        className='product product-view'
