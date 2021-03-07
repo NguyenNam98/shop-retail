@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './pages/Home/Home';
-import Product from './Components/Product/ProductView';
+import Shop from './pages/Shop/Shop'
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <div className='App'>
       <Switch>
         <Route path='/' exact component={Home}/>
-        <Route path='/products' exact component={Product}/>
+        <Route path='/shop' exact component={Shop}/>
       </Switch>
       </div>
     </Router>

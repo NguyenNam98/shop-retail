@@ -128,3 +128,49 @@
     bottom: -3px;
   }
   
+  /* Banner2 */
+  .banner2{
+    width: 100%;
+    height: 100%;
+  }
+  .banner2-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f1f2f4;
+    flex-direction: column;
+    position: relative;
+    padding: 160px 0;
+  
+  }
+  .banner2-title{
+    font-size: 6vw;
+    font-weight: 300;
+    font-family: sans-serif;
+    /* margin-top: -40px; */
+    margin-bottom: 30px;
+    text-transform: capitalize;
+  }
+  .banner2-path{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .banner2-path-home{
+    margin: 0 10px;
+    position: relative;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  .banner2-path-certain{
+    margin: 0 10px;
+    position: relative;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
