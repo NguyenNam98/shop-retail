@@ -114,7 +114,7 @@ import DropDown from '../Dropdown/Dropdown';
                         dropdownTilte:groupCateWomen[i],
                         dropdownList:womenGroupCate2
                     };
-                    
+                    console.log(groupCateMen);
                     womenDropdownContent.push(womenData);
                 }
                 
@@ -172,7 +172,7 @@ import DropDown from '../Dropdown/Dropdown';
                     onMouseLeave={onMouseLeaveWomen}
                   >
                     <Link 
-                        to='/women'
+                        to='/woman'
                         className='nav-links'
                         onClick={closeMobileMenu}
                     >

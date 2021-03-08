@@ -32,7 +32,7 @@ function ProductView(props){
        <div
        className='product product-view'
        style={{
-           width:`calc(${props.width}-30px)`,
+           width:`calc(${props.width} - 30px)`,
            height:`${props.parentHeight}`,
        }}
        > 

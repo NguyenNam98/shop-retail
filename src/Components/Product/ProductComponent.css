@@ -11,7 +11,7 @@
   }
   
   .product-view {
-    animation-name: opa;
+    animation-name: product-view;
     animation-duration: 0.8s;
   }
   .product-img {

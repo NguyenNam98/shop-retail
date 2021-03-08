@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link,withRouter} from 'react-router-dom';
 import './HomeComponent.css';
 import b1 from '../../Assets/b1.jpg';
 import b2 from '../../Assets/b2.jpg';
@@ -26,7 +26,7 @@ function HomeFeature(){
                             <div className="black-box">
                                 <div className="black-box-title">Woman</div>
                                 <div className="black-box-center">
-                                    <Link to='/shop' className='black-box-link'>Shop Now</Link>
+                                    <Link to='/woman' className='black-box-link'>Shop Now</Link>
                                </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ function HomeFeature(){
                             <div className="black-box">
                                 <div className="black-box-title">Men</div>
                                 <div className="black-box-center">
-                                    <Link to='/shop' className='black-box-link'>Shop Now</Link>
+                                    <Link to='/men' className='black-box-link'>Shop Now</Link>
                                </div>
                             </div>
                         </div>
@@ -54,4 +54,4 @@ function HomeFeature(){
         </div>
     )
 }
-export default HomeFeature;
+export default withRouter(HomeFeature);
