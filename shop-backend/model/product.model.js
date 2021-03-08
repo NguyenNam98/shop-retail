@@ -2,8 +2,8 @@ const mongoose= require('mongoose');
 
 var userSchema=new mongoose.Schema({
     _id:String,
-    productImg:String,
-    productSize: String,
+    productImg:Array,
+    productSize:Array,
     ProductVote:Array,
     ratingImg:String,
     productName:String,
