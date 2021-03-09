@@ -1,14 +1,21 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect,useContext} from 'react'
 import  {Link,withRouter}
    from "react-router-dom";
 import Axios from 'axios';
 import './Navbar.css';
 import Button from '../LoginButton/Button';
 import DropDown from '../Dropdown/Dropdown';
-
+import {CartContext} from '../../Context/Cart';
 
  function Navbar(){
+     const {cartItems} = useContext(CartContext);
+
+     const [numberItems,setNumberItems]=useState(0);
+
      const[click,setClick]= useState(false);
+
+    const [tab,setTab]=useState(1);
+
      const[menDataDropdown, setMenDataDropDown]=useState([]);
      const[womenDataDropdown, setWomenDataDropDown]=useState([]);
      const [dropMen,setDropdownMen]=useState(false);
@@ -48,7 +55,6 @@ import DropDown from '../Dropdown/Dropdown';
             setDropdownWomen(false)
         }
     }
-
      useEffect(() => {
          Axios.get('http://localhost:3001/products').then((res)=>{
             const menProductGroupCate=[];
@@ -114,7 +120,7 @@ import DropDown from '../Dropdown/Dropdown';
                         dropdownTilte:groupCateWomen[i],
                         dropdownList:womenGroupCate2
                     };
-                    console.log(groupCateMen);
+                 
                     womenDropdownContent.push(womenData);
                 }
                 
@@ -122,24 +128,31 @@ import DropDown from '../Dropdown/Dropdown';
                 setWomenDataDropDown(womenDropdownContent);
                
          })
-     },[])
+         let exNumberItems=0;
+         for(let i in cartItems){
+             exNumberItems+=Number(cartItems[i].count)
+         }
+         setNumberItems(exNumberItems);
+         
+     },[cartItems])
+    
     return (
         <div className='Navbar'>
-            <nav className="navbar-container">
+            <div className="navbar-container">
                <Link to='/' className="nav-logo">MICHAEL
                </Link>
                <div className="menu-icon" onClick={handleClick}>
                   <i className={click ? 'fas fa-times': 'fas fa-bars' }>
                   </i>
                </div>           
-               <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                  <li className='nav-item'>
+               <ul className={click ? 'nav-menu active' : 'nav-menu'} >
+                  <li className={'nav-item'}>
                       <Link
-                        to='/' className='nav-links' 
-                        onClick={closeMobileMenu}
+                        onClick={closeMobileMenu,()=>{setTab(1)}}
+                        to='/' className={tab===1 ?'nav-links clicked':'nav-links'}
+                     
                        >
-                           Home
-                           
+                           Home 
                        </Link>
                   </li>
                   <li 
@@ -149,15 +162,15 @@ import DropDown from '../Dropdown/Dropdown';
                   >
                       <Link 
                         to='/men'
-                        className='nav-links' 
-                        onClick={closeMobileMenu}
-                      
+                        onClick={closeMobileMenu,()=>{setTab(2)}}
+                        className={tab===2 ?'nav-links clicked':'nav-links'}
                       >
-                      Men                     
+                         Men                     
                       </Link>
                       <i 
-                       onClick={setClickMen}
-                      className='fas fa-caret-down' />
+                        onClick={setClickMen}
+                        className='fas fa-caret-down' 
+                       />
                     {dropMen&&<DropDown
                        
                         className='dropdown'
@@ -165,20 +178,20 @@ import DropDown from '../Dropdown/Dropdown';
                         Sex='Men'
                       />
                    }
-                  </li>
-                  <li 
+                   </li>
+                   <li 
                     className='nav-item'
                     onMouseEnter={onMouseEnterWomen}
                     onMouseLeave={onMouseLeaveWomen}
-                  >
-                    <Link 
-                        to='/woman'
-                        className='nav-links'
-                        onClick={closeMobileMenu}
-                    >
-                        Women
-                       
-                    </Link>
+                   >
+                        <Link 
+                            to='/woman'
+                            className={tab===3 ?'nav-links clicked':'nav-links'}
+                            onClick={closeMobileMenu,()=>{setTab(3)}}
+                        >
+                            Women
+                        
+                        </Link>
                     <i
                      onClick={setClickWomen}
                      className='fas fa-caret-down' />
@@ -191,19 +204,19 @@ import DropDown from '../Dropdown/Dropdown';
                   <li className='nav-item'>
                       <Link 
                         to='/news'
-                        className='nav-links'
-                        onClick={closeMobileMenu}
+                        className={tab===4 ?'nav-links clicked':'nav-links'}
+                        onClick={closeMobileMenu,()=>{setTab(4)}}
                         >
                             News
                       </Link>
                   </li>
                   <li className='nav-item'>
                       <Link 
-                          to='/abouts'
-                          className='nav-links'
-                           onClick={closeMobileMenu}
+                          to='/contact'
+                          className={tab===5 ?'nav-links clicked':'nav-links'}
+                        onClick={closeMobileMenu,()=>{setTab(5)}}
                       >
-                                About
+                                Contact
                        </Link>
                   </li>
                   <li className='nav-item'>
@@ -218,13 +231,16 @@ import DropDown from '../Dropdown/Dropdown';
                    <i className="fas fa-search"></i>
                 </form>
                <div className='nav-cart'>
-                    <Link to='like' className='favourite'><i class="far fa-heart"></i></Link>
-                    <Link to='cart' className='cart'><i class="fas fa-cart-plus"></i></Link>
+                    <Link to='/like' className='favourite'><i class="far fa-heart"></i></Link>
+                    <Link to='/cart' className='cart'>
+                        <i class="fas fa-cart-plus"></i>
+                        <div className='number'>{numberItems}</div>
+                    </Link>
                 </div>
                 
                 <Button/>
                 
-            </nav>
+            </div>
         </div>
     ) 
  }

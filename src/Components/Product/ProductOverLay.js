@@ -1,14 +1,17 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import {withRouter} from 'react-router-dom';
+import {CartContext} from '../../Context/Cart';
+
 
  function ProductOverLay(props){
+     const {addToCart,addToWishList}=useContext(CartContext);
     const product=props.product;
     const [loading,setLoading]=useState(0);
     const cartClick = () => {
         setLoading(1)
         setTimeout(()=>{
             setLoading(0)
-            // addToCart(props.product)
+             addToCart(props.product)
         }, 500)
     }
 
@@ -16,7 +19,7 @@ import {withRouter} from 'react-router-dom';
         setLoading(2)
         setTimeout(()=>{
             setLoading(0)
-            // addToWishList(props.product)
+             addToWishList(props.product)
         }, 500)
     }
 
@@ -34,7 +37,7 @@ import {withRouter} from 'react-router-dom';
             <div 
             className='product-icon 
             flex-center icon-cart icon-btn'
-            // onClick={cartClick}
+            onClick={cartClick}
             >
                 {
                     loading===1&&
@@ -49,7 +52,7 @@ import {withRouter} from 'react-router-dom';
             <div 
             className='product-icon 
             flex-center icon-wishlist icon-btn'
-            // onClick={cartClick}
+              onClick={wishListClick}
             >
                 {
                     loading===2&&
@@ -67,11 +70,11 @@ import {withRouter} from 'react-router-dom';
             onClick={props.openView}
             >
                 {
-                    loading===2&&
+                    loading===3&&
                     <div className='loading-icon'></div>
                 }
                 {
-                    loading!==2&&
+                    loading!==3&&
                     <i className="fa fa-eye" aria-hidden="true"></i>
                 }
 

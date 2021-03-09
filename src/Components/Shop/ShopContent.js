@@ -23,7 +23,7 @@ function ShopContent(props){
         tooltip:false,
         
     } 
-    let width, height, parentHeight, marginLeft, marginRight, classWidth = "";
+    let width, height, parentHeight = "";
     if (gridTab === 1) {
         width = `${100/6}%`; // six
         parentHeight = `${100/6}vw`;

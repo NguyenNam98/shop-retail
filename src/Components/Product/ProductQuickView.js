@@ -1,6 +1,7 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import {withRouter} from 'react-router-dom';
 import './ProductComponent.css';
+import {CartContext} from '../../Context/Cart';
 
 import Slider from "react-slick";
 
@@ -9,6 +10,7 @@ import ReactStars from "react-rating-stars-component";
 
 function ProductQuickView(props){
     const product=props.product;
+    const {addToCart}=useContext(CartContext);
   
     const [countCart, setCountCart] = useState(1);
     const [announce,setAnnouce]=useState(false);
@@ -21,10 +23,11 @@ function ProductQuickView(props){
     const averageRating = totalRating/ratingList.length;
 
     const cartClick=()=>{
+        addToCart(product,countCart)
         setAnnouce(true);
         setTimeout(()=>{
             setAnnouce(false)
-        }, 2000)
+        }, 1000)
     }
 
     const ratingStar = {
