@@ -10,7 +10,7 @@ import Footer from '../../Components/Layouts/Footer';
 
 function Shop(props){
 
-    const [products, setProducts]=useState();
+    const [products, setProducts]=useState([]);
     const [productCateList,setProductCateList]=useState([]);
     let sex =props.location.pathname.split('/')[1];
     let cate=props.location.pathname.split('/')[2];

@@ -23,7 +23,7 @@ function App() {
         <Route path='/woman' exact component={Shop}/>
         <Route path='/woman/:cate' exact component={Shop}/>
         <Route path='/men/:cate' exact component={Shop}/>
-        {/* <Route path='/products/:id' exact component={ProductDetail}/> */}
+        <Route path='/products/:id' exact component={ProductDetail}/>
       </Switch>
       </div>
     </Router>

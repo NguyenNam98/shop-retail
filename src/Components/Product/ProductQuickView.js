@@ -99,9 +99,7 @@ function ProductQuickView(props){
                                     )
                                 })} 
                             </Slider>
-                           
-                            
-                       
+   
                     </div>
                    <div 
                     className="product-info-detail" 
