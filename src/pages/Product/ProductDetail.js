@@ -1,4 +1,4 @@
-import React,{useEffect,useState,useRef} from 'react';
+import React,{useEffect,useState} from 'react';
 import Axios from 'axios';
 import Navbar from '../../Components/Navbar/Navbar';
 import NewsLetter from '../../Components/Layouts/NewsLetter';
@@ -20,23 +20,21 @@ export default function ProductDetail(props){
             <Navbar/>
             {product.map((item,index)=>{
                 return(
-                  
                     <ProductBody
                     product={item}
                     id={index}
-                   />
-                
+                    />
                 )
             })}
             {product.map((item,index)=>{
                 return(
-                   <ProductRecommend
-                   productPre={item}
-                   id={index}
-                   />
-                 
-                )
-            })}
+                        <ProductRecommend
+                        productPre={item}
+                        id={index}
+                        />
+                    )
+                })
+            }
             
             <NewsLetter/>
             <Footer/>

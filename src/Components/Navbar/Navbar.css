@@ -54,12 +54,10 @@
     text-decoration: none;
     padding: 0.5rem 1rem;
  }
-/* .nav-links:hover{
+.nav-links:hover{
   border-bottom: solid 3px black;
-} */
- .clicked{
-  border-bottom: solid 3px black;
- }
+}
+
  
   .fa-bars {
     color:black;
@@ -99,8 +97,10 @@
   .nav-cart{
     display: flex;
     position: relative;
-    width: 100px;
+    width: 50px;
     justify-content: space-around;
+    text-align: center;
+    cursor: pointer;
   }
   .fa-search{
       color: black;

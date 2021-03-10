@@ -24,29 +24,31 @@ export function CartProvider(props){
        }
        setTotalItems(JSON.parse(localStorage.getItem('total')));
     }, [])
+
     const addToWishList=(product={})=>{
         const exWishListItems=[...wishListItems];
         if(wishListItems.length===0){
             exWishListItems.push({...product});
-        }
-        if(!isExists(wishListItems,product))
-        {
-            exWishListItems.push({...product});
-        }
+        }else{
+            if(!isExists(wishListItems,product)){
+                exWishListItems.push({...product});
+                }
+            }
         localStorage.setItem('wishlist',JSON.stringify( exWishListItems));
         setWishListItems(exWishListItems);
     }
+
     const addToCart=(product={},count)=>{
         if(count){
             setNumberClicked(count+numberClicked)
             const exCartItems=[...cartItems];
             if(cartItems.length===0){
-                exCartItems.push({...product,count})
+                exCartItems.push({...product,count: count})
             }else{
                 if(!isExists(cartItems,product)){
                     exCartItems.push({...product,count:count})
                 }else{
-                    for(let i in exCartItems){
+                    for(let i=0; i< exCartItems.length;i++){
                         if(exCartItems[i]._id===product._id){
                             exCartItems[i].count+=count;
                             break;
@@ -81,6 +83,7 @@ export function CartProvider(props){
             getTotal(exCartItems);
         }
     }
+
     const getTotal=(arr)=>{
         let exTotal=0;
         for(let i=0; i <arr.length;i++){
@@ -90,12 +93,13 @@ export function CartProvider(props){
         localStorage.setItem('total', JSON.stringify(exTotal))
        
     }
+
     const removeProductCart=(event)=>{
         const id=event.target.id;
         const exCartItems=[...cartItems];
-        for(let i=0; i<cartItems.length;i++){
-            if(exCartItems[i]._i===id){
-                exCartItems.slice(i,1);
+        for(let i=0; i<exCartItems.length;i++){
+            if(exCartItems[i]._id===id){
+                exCartItems.splice(i, 1);
             }
         }
         localStorage.setItem('cart', JSON.stringify(exCartItems))
@@ -105,9 +109,9 @@ export function CartProvider(props){
     const removeWishLish=(event)=>{
         const id=event.target.id;
         const exWishList=[...wishListItems];
-        for(let i=0; i<cartItems.length;i++){
+        for(let i=0; i<exWishList.length;i++){
             if(exWishList[i]._id===id){
-                exWishList.slice(i,1);
+                exWishList.splice(i,1);
             }
         }
         localStorage.setItem('wishlist', JSON.stringify(exWishList))
@@ -118,7 +122,7 @@ export function CartProvider(props){
         const id=event.target.id;
         const exCartItems=[...cartItems];
         for(let i=0;i<exCartItems.length;i++){
-            if(exCartItems[i]._id=id){
+            if(exCartItems[i]._id===id){
                 if(exCartItems[i].count>1){
                     exCartItems[i].count-=1;
                 }
@@ -132,7 +136,7 @@ export function CartProvider(props){
         const id=event.target.id;
         const exCartItems=[...cartItems];
         for(let i=0;i<exCartItems.length;i++){
-            if(exCartItems[i]._id=id){  
+            if(exCartItems[i]._id===id){  
                     exCartItems[i].count+=1; 
             }
         }
@@ -145,7 +149,7 @@ export function CartProvider(props){
         const value=event.target.value;
         const exCartItems=[...cartItems];
         for(let i=0;i<exCartItems.length;i++){
-            if(exCartItems[i]._id=id){  
+            if(exCartItems[i]._id===id){  
                     exCartItems[i].count=Number(value); 
             }
         }

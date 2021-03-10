@@ -55,7 +55,7 @@ function ShopContent(props){
         for (let i in dateProductVirtual) {
             const today = new Date();
             const productDate = new Date(dateProductVirtual[i].productDate);
-            if (((today - productDate)/(1000 * 3600 * 24)) < 10) {
+            if (((today - productDate)/(1000 * 3600 * 24)) < 60) {
                 dateProduct.push(dateProductVirtual[i])
             }
         }

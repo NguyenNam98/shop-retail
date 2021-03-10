@@ -6,6 +6,7 @@ import './Navbar.css';
 import Button from '../LoginButton/Button';
 import DropDown from '../Dropdown/Dropdown';
 import {CartContext} from '../../Context/Cart';
+import Cart from '../Cart/Cart';
 
  function Navbar(){
      const {cartItems} = useContext(CartContext);
@@ -13,8 +14,9 @@ import {CartContext} from '../../Context/Cart';
      const [numberItems,setNumberItems]=useState(0);
 
      const[click,setClick]= useState(false);
-
-    const [tab,setTab]=useState(1);
+     const [openCart,setOpenCart ]=useState(false);
+     const setCloseCart=()=>{setOpenCart(false)};
+     const [tab,setTab]=useState(1);
 
      const[menDataDropdown, setMenDataDropDown]=useState([]);
      const[womenDataDropdown, setWomenDataDropDown]=useState([]);
@@ -138,6 +140,14 @@ import {CartContext} from '../../Context/Cart';
     
     return (
         <div className='Navbar'>
+            {openCart===true&&
+            <Cart
+            setCloseCart={setCloseCart}
+            openCart={openCart}
+            tab={tab}
+            setTab={setTab}
+            />
+            }
             <div className="navbar-container">
                <Link to='/' className="nav-logo">MICHAEL
                </Link>
@@ -148,8 +158,8 @@ import {CartContext} from '../../Context/Cart';
                <ul className={click ? 'nav-menu active' : 'nav-menu'} >
                   <li className={'nav-item'}>
                       <Link
-                        onClick={closeMobileMenu,()=>{setTab(1)}}
-                        to='/' className={tab===1 ?'nav-links clicked':'nav-links'}
+                        onClick={closeMobileMenu}
+                        to='/' className='nav-links'
                      
                        >
                            Home 
@@ -162,8 +172,8 @@ import {CartContext} from '../../Context/Cart';
                   >
                       <Link 
                         to='/men'
-                        onClick={closeMobileMenu,()=>{setTab(2)}}
-                        className={tab===2 ?'nav-links clicked':'nav-links'}
+                        onClick={closeMobileMenu}
+                        className='nav-links'
                       >
                          Men                     
                       </Link>
@@ -186,8 +196,8 @@ import {CartContext} from '../../Context/Cart';
                    >
                         <Link 
                             to='/woman'
-                            className={tab===3 ?'nav-links clicked':'nav-links'}
-                            onClick={closeMobileMenu,()=>{setTab(3)}}
+                            className='nav-links'
+                            onClick={closeMobileMenu}
                         >
                             Women
                         
@@ -204,8 +214,8 @@ import {CartContext} from '../../Context/Cart';
                   <li className='nav-item'>
                       <Link 
                         to='/news'
-                        className={tab===4 ?'nav-links clicked':'nav-links'}
-                        onClick={closeMobileMenu,()=>{setTab(4)}}
+                        className='nav-links'
+                        onClick={closeMobileMenu}
                         >
                             News
                       </Link>
@@ -213,8 +223,8 @@ import {CartContext} from '../../Context/Cart';
                   <li className='nav-item'>
                       <Link 
                           to='/contact'
-                          className={tab===5 ?'nav-links clicked':'nav-links'}
-                        onClick={closeMobileMenu,()=>{setTab(5)}}
+                          className='nav-links'
+                        onClick={closeMobileMenu}
                       >
                                 Contact
                        </Link>
@@ -230,12 +240,11 @@ import {CartContext} from '../../Context/Cart';
                     </Link>
                    <i className="fas fa-search"></i>
                 </form>
-               <div className='nav-cart'>
-                    <Link to='/like' className='favourite'><i class="far fa-heart"></i></Link>
-                    <Link to='/cart' className='cart'>
+               <div className='nav-cart'
+                onClick={()=>{setOpenCart(true)}}
+               >
                         <i class="fas fa-cart-plus"></i>
-                        <div className='number'>{numberItems}</div>
-                    </Link>
+                        <div className='number'>{numberItems}</div> 
                 </div>
                 
                 <Button/>

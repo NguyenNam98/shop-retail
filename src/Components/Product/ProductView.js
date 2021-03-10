@@ -60,7 +60,7 @@ function ProductView(props){
                        <div className='product-tag-item hot'>Hot</div>
                    }
                    {
-                    ((today-productDate)/(1000*86400))<40 &&
+                    ((today-productDate)/(1000*86400))<60 &&
                     <div className='product-tag-item new'>New</div>
                    }
                </div>
