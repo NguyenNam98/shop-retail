@@ -4,7 +4,7 @@ var userSchema=new mongoose.Schema({
     _id:String,
     productImg:Array,
     productSize:Array,
-    ProductVote:Array,
+    productVote:Array,
     ratingImg:String,
     productName:String,
     productSale:Number,

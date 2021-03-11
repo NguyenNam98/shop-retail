@@ -13,3 +13,10 @@ module.exports.productId= function(req,res){
   });
   
 }
+module.exports.reviewProduct = async function(req,res){
+  var id=req.params.id
+  
+  product.findOneAndUpdate({_id:id},{$push:{productVote: req.body}}, function(err){ } );
+  res.status(200).send("ok");
+
+}
