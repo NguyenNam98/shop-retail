@@ -1,0 +1,129 @@
+.checkoutbody{
+    
+    width: 80%;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+.checkoutbody-title{
+    font-size: 26px;
+    font-family: sans-serif;
+    color: #333;
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+.checkoutbody-info{
+    padding-left: 10%;
+    width: 80%;
+    padding-bottom: 50px;
+}
+.customer-info{
+    display: flex;
+    padding-bottom: 50px;
+}
+.customer-info-title{
+    width: 30%;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #777;
+}
+.customer-input{
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid #888;
+    outline: none;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.customer-input:hover{
+    border-bottom: 2px solid #333;
+}
+.checkoutbody-cartitem{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #999;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.checkout-item-info{
+    display: flex;
+   
+    align-items: center;
+    
+}
+.items-price-detail{
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    color: #777;
+}
+.checkoutbody-items-img{
+    height: 70px;
+    width: 70px;
+}
+.checkoutbody-items-name{
+  padding-left: 30px;
+  color: #777;
+  font-size: 16px;
+}
+.items-count{
+padding-right: 100px;
+}
+.checkoutbody-bill{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #888;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+.checkoutbody-total{
+    color: #777;
+    
+}
+.shipping-option{
+    border: none;
+    border-bottom: 2px solid #333 ;
+    color: #777;
+   padding-bottom: 10px;
+    width: 300px;
+    outline: none;
+}
+.paymenmethod{
+    padding-left: 20%;
+    width: 80%;
+    border-bottom: 1px solid #999;
+   
+}
+.checkbox-info{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-bottom: 20px;
+  
+}
+
+.text-checkbox{
+    padding-left: 20px;
+}
+.checkout-btn{
+    display: flex;
+    background-color:#222;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+.checkout-btn:hover{
+    background-color: #444;
+}
