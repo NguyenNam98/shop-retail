@@ -4,16 +4,14 @@ import './ProductComponent.css';
 import {CartContext} from '../../Context/Cart';
 
 import Slider from "react-slick";
-
-
 import ReactStars from "react-rating-stars-component";
 
 function ProductQuickView(props){
     const product=props.product;
-    const {addToCart}=useContext(CartContext);
+    const {addToCart,addToWishList}=useContext(CartContext);
   
     const [countCart, setCountCart] = useState(1);
-    const [announce,setAnnouce]=useState(false);
+    const [announce,setAnnouce]=useState(0);
 
     let dateProduct=new Date(product);
     let today =new Date();
@@ -22,11 +20,19 @@ function ProductQuickView(props){
     const totalRating = ratingList.reduce((a, b) => a + b, 0)
     const averageRating = totalRating/ratingList.length;
 
+    const wishListClick = () => {
+        addToWishList(props.product)
+        setAnnouce(2);
+        setTimeout(()=>{
+            setAnnouce(0)
+        }, 500)
+    }
+
     const cartClick=()=>{
         addToCart(product,countCart)
-        setAnnouce(true);
+        setAnnouce(1);
         setTimeout(()=>{
-            setAnnouce(false)
+            setAnnouce(0)
         }, 1000)
     }
 
@@ -57,12 +63,18 @@ function ProductQuickView(props){
         <div>
             <div className={props.view===true?'productquickview': 'productquickview none'}>
                 <div className='productquickview-container '>
-                    {announce===true&&
+                    {announce===1&&
                     <div className='annouce'>
                          <i class="fas fa-check-circle"></i>
                          <p>Product is add to cart successfully!</p>
                     </div>
                     } 
+                     {announce===2&&
+                    <div className='annouce'>
+                         <i class="fas fa-check-circle"></i>
+                         <p>Product is add to wishlist successfully!</p>
+                    </div>
+                    }
                     <div className='close-icon flex-center'>
                         <i 
                             class="fa fa-times" 
@@ -189,7 +201,10 @@ function ProductQuickView(props){
                                <p>Add to cart</p>
 
                             </div>
-                            <div className='product-info-wishlist flex-center'>
+                            <div className='product-info-wishlist flex-center'
+                            id={product._id}
+                            onClick={wishListClick}
+                            >
                             <i class="fa fa-heart" aria-hidden="true"></i>
                             </div>
                         </div>

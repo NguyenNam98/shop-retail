@@ -7,7 +7,7 @@ import {CartContext} from '../../Context/Cart';
 
 function ProductBody(props){
    const product=props.product;
-   const {addToCart}=useContext(CartContext);
+   const {addToCart,addToWishList}=useContext(CartContext);
   
    const [countCart, setCountCart] = useState(1);
  
@@ -26,6 +26,9 @@ function ProductBody(props){
 };
    const cartClick=()=>{
        addToCart(product,countCart)
+   }
+   const wishLishClick=()=>{
+       addToWishList(product);
    }
 
     const settings = {
@@ -163,7 +166,8 @@ function ProductBody(props){
                                 <p>Add to cart</p>
 
                                 </div>
-                                <div className='product-info-wishlist flex-center'>
+                                <div className='product-info-wishlist flex-center'
+                                onClick={wishLishClick}>
                                 <i class="fa fa-heart" aria-hidden="true"></i>
                                 </div>
                             </div>

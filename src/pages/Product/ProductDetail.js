@@ -5,6 +5,7 @@ import NewsLetter from '../../Components/Layouts/NewsLetter';
 import Footer from '../../Components/Layouts/Footer';
 import ProductBody from '../../Components/Product/ProductBody';
 import ProductRecommend from '../../Components/Product/ProductRecommend';
+import ProductReview from '../../Components/Product/ProductReview';
 
 
 export default function ProductDetail(props){
@@ -26,6 +27,15 @@ export default function ProductDetail(props){
                     />
                 )
             })}
+             {product.map((item,index)=>{
+                return(
+                        <ProductReview
+                        product={item}
+                        id={index}
+                        />
+                    )
+                })
+            }
             {product.map((item,index)=>{
                 return(
                         <ProductRecommend
@@ -35,7 +45,7 @@ export default function ProductDetail(props){
                     )
                 })
             }
-            
+           
             <NewsLetter/>
             <Footer/>
         </div>
