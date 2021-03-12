@@ -1,3 +1,38 @@
-{ "_id" : { "$oid" : "5faa9b8ba15f8e8a1d5608d8" }, "newImg" : "http://localhost:3001/images/64d707f0c7a3f30189f58d03f3e026c3", "newTime" : "Tue Nov 10 2020 20:54:19 GMT+0700 (+07)", "newCate" : "inspiration", "newTitle" : "5 Fashion Labels on the Rise this Summer", "newContent" : "<p>ihafksjd bkfho ;iwHFLJAKJ,CVMNZMN K KJHASKDJASHKD QWEASD</p>\r\n", "newView" : 9 }
-{ "_id" : { "$oid" : "5fabdc5535f79aac9fa9ae66" }, "newImg" : "http://localhost:3001/images/7f084c58e060fe83412bb02ff5d49987", "newTime" : "Wed Nov 11 2020 19:43:01 GMT+0700 (+07)", "newCate" : "shopping", "newTitle" : "Friday Finest The Best of The Week", "newContent" : "<p>shopping is best</p>\r\n", "newView" : 2 }
-{ "_id" : { "$oid" : "5fabdc6935f79aac9fa9ae67" }, "newImg" : "http://localhost:3001/images/d4a555fb9fe551eed12e4a7601e907ad", "newTime" : "Wed Nov 11 2020 19:43:21 GMT+0700 (+07)", "newCate" : "fashion", "newTitle" : "A Guide To The Best Accessories For Fall", "newContent" : "<p>sda aza1 12</p>\r\n", "newView" : 1 }
+[
+    {
+        "_id": "602b91e6a439d4657cda6851",
+        "newImg": "http://localhost:3001/images/170547c6437d54784f00f9d1fd3f2d3e",
+        "newTime": "Tue Feb 16 2021 16:35:22 GMT+0700 (+07)",
+        "newCate": "INSPIRATION",
+        "newTitle": "A Guide To The Best Accessories For Fall",
+        "newContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>\r\n",
+        "newView": 66
+    },
+    {
+        "_id": "602b9200a439d4657cda6852",
+        "newImg": "http://localhost:3001/images/4406c163933c4289d8e9e0a9b678c5f9",
+        "newTime": "Tue Feb 16 2021 16:35:47 GMT+0700 (+07)",
+        "newCate": "INSPIRATION",
+        "newTitle": "The Best Street Style From Brooklyn’s 2016",
+        "newContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>\r\n",
+        "newView": 37
+    },
+    {
+        "_id": "602b922ba439d4657cda6853",
+        "newImg": "http://localhost:3001/images/8b9692a68553fc0b25b44262b3af155e",
+        "newTime": "Tue Feb 16 2021 16:36:31 GMT+0700 (+07)",
+        "newCate": "FASHION",
+        "newTitle": "A Minimalist Coat is A Must For Fall",
+        "newContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>\r\n",
+        "newView": 23
+    },
+    {
+        "_id": "602b923ca439d4657cda6854",
+        "newImg": "http://localhost:3001/images/4387c7df57044d1c41b326684ef3f076",
+        "newTime": "Tue Feb 16 2021 16:36:48 GMT+0700 (+07)",
+        "newCate": "SHOPPING",
+        "newTitle": "Best Dressed: The Week in Outfits",
+        "newContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>\r\n",
+        "newView": 19
+    }
+]

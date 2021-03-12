@@ -11,8 +11,8 @@ const cors = require("cors");
 
 const userModel=require('./model/user.model');
 const productRoutes = require('./routes/product.route');
-const orderRoutes=require('./routes/order.route')
-
+const orderRoutes=require('./routes/order.route');
+const newsRoutes=require('./routes/news.route');
 
 const app = express();
 app.use(
@@ -131,5 +131,6 @@ app.post("/login",async(req,res)=>{
 
 app.use('/products',productRoutes);
 app.use('/order',orderRoutes);
+app.use('/news',newsRoutes);
 
 app.listen(3001)

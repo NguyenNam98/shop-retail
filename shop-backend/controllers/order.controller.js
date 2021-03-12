@@ -22,7 +22,7 @@ if(orderLegnth){
         const orderList=req.body.orderList;
         
         for(let i in orderList){
-            console.log(orderList[i].amount)
+           
             await product.findByIdAndUpdate(orderList[i].id,{
                 $inc:{productSold: orderList[i].amount}
             })

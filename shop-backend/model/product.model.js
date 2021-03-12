@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-var userSchema=new mongoose.Schema({
+var productSchema=new mongoose.Schema({
     _id:String,
     productImg:Array,
     productSize:Array,
@@ -23,5 +23,5 @@ var userSchema=new mongoose.Schema({
 }
 );
 
-var Product= mongoose.model('Product',userSchema,'products');
+var Product= mongoose.model('Product',productSchema,'products');
 module.exports= Product;
