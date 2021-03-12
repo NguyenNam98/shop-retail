@@ -149,7 +149,11 @@ import Cart from '../Cart/Cart';
             />
             }
             <div className="navbar-container">
-               <Link to='/' className="nav-logo">MICHAEL
+               <Link to='/' className="nav-logo" onClick={()=>{
+                   window.scrollTo(0,0)
+               }}
+               >
+                   MICHAEL
                </Link>
                <div className="menu-icon" onClick={handleClick}>
                   <i className={click ? 'fas fa-times': 'fas fa-bars' }>
@@ -158,7 +162,7 @@ import Cart from '../Cart/Cart';
                <ul className={click ? 'nav-menu active' : 'nav-menu'} >
                   <li className={'nav-item'}>
                       <Link
-                        onClick={closeMobileMenu}
+                        onClick={closeMobileMenu,()=>{ window.scrollTo(0,0)}}
                         to='/' className='nav-links'
                      
                        >
@@ -172,7 +176,7 @@ import Cart from '../Cart/Cart';
                   >
                       <Link 
                         to='/men'
-                        onClick={closeMobileMenu}
+                        onClick={closeMobileMenu,()=>{ window.scrollTo(0,0)}}
                         className='nav-links'
                       >
                          Men                     
@@ -197,7 +201,7 @@ import Cart from '../Cart/Cart';
                         <Link 
                             to='/woman'
                             className='nav-links'
-                            onClick={closeMobileMenu}
+                            onClick={closeMobileMenu,()=>{ window.scrollTo(0,0)}}
                         >
                             Women
                         
@@ -215,7 +219,7 @@ import Cart from '../Cart/Cart';
                       <Link 
                         to='/news'
                         className='nav-links'
-                        onClick={closeMobileMenu}
+                        onClick={closeMobileMenu,()=>{ window.scrollTo(0,0)}}
                         >
                             News
                       </Link>
@@ -224,7 +228,7 @@ import Cart from '../Cart/Cart';
                       <Link 
                           to='/contact'
                           className='nav-links'
-                        onClick={closeMobileMenu}
+                        onClick={closeMobileMenu,()=>{ window.scrollTo(0,0)}}
                       >
                                 Contact
                        </Link>

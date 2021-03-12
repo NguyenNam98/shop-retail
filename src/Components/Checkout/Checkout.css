@@ -124,6 +124,13 @@ padding-right: 100px;
     margin-left: 20%;
     margin-top: 20px;
 }
+[type='radio']{
+    background-color: #000;
+    background: #000;
+    width: 20px;
+    height: 20px;
+    color: #000;
+}
 .checkout-btn:hover{
     background-color: #444;
 }

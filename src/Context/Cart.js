@@ -171,7 +171,8 @@ export function CartProvider(props){
              plusCount:plusCount,
              minusCount:minusCount,
              totalItems:totalItems,
-             removeWishLish:removeWishLish
+             removeWishLish:removeWishLish,
+             setCartItems:setCartItems,
 
          }}
         >

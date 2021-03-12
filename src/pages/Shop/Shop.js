@@ -23,7 +23,7 @@ function Shop(props){
              for(let i in res.data){
                  cateList.push(res.data[i].productCate);
                  if(cate){
-                     if((res.data[i].productName).toLowerCase().includes(cate.toLowerCase())){
+                     if((res.data[i].productCate).toLowerCase().split(' ').join('-').includes(cate.toLowerCase())){
                          exProducts.push(res.data[i])
                      }
                  }else
@@ -37,6 +37,7 @@ function Shop(props){
             );
             setProductCateList(list);    
             setProducts(exProducts);
+            
                
         }) 
         }
