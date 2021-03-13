@@ -4,7 +4,7 @@ import {CartContext} from '../../Context/Cart'
  function CartItems(props){
      const {cartItems,minusCount,removeProductCart,plusCount,updateCount}=useContext(CartContext);
      return(
-         <div className='CartItem'>
+         <div className='CartItem fade-in'>
              <div className='cartitems-list'>
                  {cartItems.length===0&&
                  <div className='no-product'> No products in the cart !</div>

@@ -67,13 +67,21 @@
     color: black;
 }
 
-@keyframes active_line {
-    from {width: 0px;}
-    to {width: 100%;}
-  }
-@keyframes fadein{
-     from {transform: translateY(100px);}
-    to {transform: translateY(0px)}
+@keyframes fade-in{
+  from {transform: translateX(200px);}
+  to {transform: translateX(0px)}
+}
+.fade-in{
+  animation-name: fade-in;
+  animation-duration: .5s;
+}
+@keyframes fade-out{
+  from {transform: translateX(-200px);}
+  to {transform: translateX(0px)}
+}
+.fade-out{
+  animation-name: fade-out;
+  animation-duration: .5s;
 }
 .fade-in {
     animation-name:fadein;

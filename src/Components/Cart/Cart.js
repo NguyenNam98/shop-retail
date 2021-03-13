@@ -17,7 +17,7 @@ import {CartContext} from '../../Context/Cart';
                      />
                  </div>
              </div>
-             <div className={props.openCart===false ? 'fade-in':''}>
+            <div className={props.openCart===false ? 'fade-in':''}>
                 <div className='cart-tab'>
                     <div
                     className={props.tab===1?'cart-items cart-items-active':'cart-items'}
@@ -35,7 +35,7 @@ import {CartContext} from '../../Context/Cart';
                   </div>
                   {props.tab===1&&<CartItems/>}
                   {props.tab===2&&<WishListItems/>}
-                </div>
+            </div>
             { props.tab === 1 &&
                 <div className="cart-checkout-box flex-center">
                     <div className="cart-checkout-text flex">

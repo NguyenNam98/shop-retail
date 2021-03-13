@@ -21,8 +21,6 @@ export default function Registration() {
       console.log(response.data)
     });
   }
-
-
   const login = () => {
     Axios.post("http://localhost:3001/login", {
       email: email,
@@ -39,7 +37,7 @@ export default function Registration() {
 
   useEffect(() => {
     Axios.get("http://localhost:3001/login").then((response) => {
-      if (response.data.loggedIn == true) {
+      if (response.data.loggedIn === true) {
         setLoginStatus(true);
       }
     });

@@ -18,7 +18,7 @@ import Axios from 'axios';
     }
 
      return(
-         <div className='wish-list'>
+         <div className='wish-list fade-out'>
             
                  {wishListItems.length===0&&
                  <div className='no-product'> The WishList is empty !</div>

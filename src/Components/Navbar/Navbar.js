@@ -3,10 +3,10 @@ import  {Link,withRouter}
    from "react-router-dom";
 import Axios from 'axios';
 import './Navbar.css';
-import Button from '../LoginButton/Button';
 import DropDown from '../Dropdown/Dropdown';
 import {CartContext} from '../../Context/Cart';
 import Cart from '../Cart/Cart';
+import Login from '../Login/Login';
 
  function Navbar(){
      const {cartItems} = useContext(CartContext);
@@ -14,9 +14,13 @@ import Cart from '../Cart/Cart';
      const [numberItems,setNumberItems]=useState(0);
 
      const[click,setClick]= useState(false);
+
      const [openCart,setOpenCart ]=useState(false);
      const setCloseCart=()=>{setOpenCart(false)};
      const [tab,setTab]=useState(1);
+
+     const [openLogin,setOpenLogin] =useState(false);
+     const setCloseLogin=()=>{setOpenLogin(false)};
 
      const[menDataDropdown, setMenDataDropDown]=useState([]);
      const[womenDataDropdown, setWomenDataDropDown]=useState([]);
@@ -148,6 +152,16 @@ import Cart from '../Cart/Cart';
             setTab={setTab}
             />
             }
+            {
+                openLogin===true&&
+                <Login 
+                setCloseLogin={setCloseLogin}
+                openLogin={openLogin}
+                />
+            }
+            {
+
+            }
             <div className="navbar-container">
                <Link to='/' className="nav-logo" onClick={()=>{
                    window.scrollTo(0,0)
@@ -251,7 +265,7 @@ import Cart from '../Cart/Cart';
                         <div className='number'>{numberItems}</div> 
                 </div>
                 
-                <Button/>
+                <i class="fas fa-user" onClick={()=>{setOpenLogin(true)}}></i>
                 
             </div>
         </div>
