@@ -24,6 +24,7 @@ export default function ProductDetail(props){
                     <ProductBody
                     product={item}
                     id={index}
+                    key={index}
                     />
                 )
             })}
@@ -31,6 +32,7 @@ export default function ProductDetail(props){
                 return(
                         <ProductReview
                         product={item}
+                        key={index}
                         id={index}
                         />
                     )
@@ -41,6 +43,7 @@ export default function ProductDetail(props){
                         <ProductRecommend
                         productPre={item}
                         id={index}
+                        key={index}
                         />
                     )
                 })

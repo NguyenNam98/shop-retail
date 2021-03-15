@@ -1,11 +1,12 @@
 import React from 'react';
+import '../../App.css'
 import Navbar from '../../Components/Navbar/Navbar';
 import NewsLetter from '../../Components/Layouts/NewsLetter';
 import Footer from '../../Components/Layouts/Footer';
 import NewsBanner from '../../Components/Banner/NewsBanner';
  function News(){
      return(
-         <div>
+         <div className='news-fade'>
              <Navbar/>
              <NewsBanner/>
              <NewsLetter/>

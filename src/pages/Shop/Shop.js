@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from "react";
+import '../../App.css'
 import Axios from 'axios';
 import{Link, withRouter} from 'react-router-dom'
 import Navbar from '../../Components/Navbar/Navbar';
@@ -87,7 +88,7 @@ function Shop(props){
      }, [sex,cate])
 
     return(
-        <div>
+        <div className='shop-fadein'>
             <Navbar/>
             <Banner imgBanner={imgBanner}
             />

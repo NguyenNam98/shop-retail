@@ -76,7 +76,7 @@
   animation-duration: .5s;
 }
 @keyframes fade-out{
-  from {transform: translateX(-200px);}
+  from {transform: translateX(-200px)}
   to {transform: translateX(0px)}
 }
 .fade-out{

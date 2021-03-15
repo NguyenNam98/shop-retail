@@ -65,25 +65,25 @@ function ProductQuickView(props){
                 <div className='productquickview-container '>
                     {announce===1&&
                     <div className='annouce'>
-                         <i class="fas fa-check-circle"></i>
+                         <i className="fas fa-check-circle"></i>
                          <p>Product is add to cart successfully!</p>
                     </div>
                     } 
                      {announce===2&&
                     <div className='annouce'>
-                         <i class="fas fa-check-circle"></i>
+                         <i className="fas fa-check-circle"></i>
                          <p>Product is add to wishlist successfully!</p>
                     </div>
                     }
                     <div className='close-icon flex-center'>
                         <i 
-                            class="fa fa-times" 
+                            className="fa fa-times" 
                             aria-hidden="true"
                             onClick={()=>{props.closeView()}}
                         />
                     </div>
                     <div className='producquickview-slider'>
-                         <div class='productquickview-tag'>
+                         <div className='productquickview-tag'>
                             {
                                 product.productSale>0&&
                                 <div className='productquickview-tag-item sale'>
@@ -173,7 +173,7 @@ function ProductQuickView(props){
                                     if (countCart > 1) setCountCart(countCart-1) 
                                 }}
                                 >
-                                <i class="fa fa-minus" aria-hidden="true"></i>
+                                <i className="fa fa-minus" aria-hidden="true"></i>
                                 </div>
                                 <div className='count-cart-item text center'>
                                     <form onSubmit={(event)=>{
@@ -191,13 +191,13 @@ function ProductQuickView(props){
                                  onClick={()=>{setCountCart(countCart+1) 
                                  }}
                                 >
-                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i className="fa fa-plus" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <div className='product-info-addtocart flex-center tab-btn'
                              onClick={cartClick}
                             >
-                               <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                               <i className="fa fa-cart-plus" aria-hidden="true"></i>
                                <p>Add to cart</p>
 
                             </div>
@@ -205,7 +205,7 @@ function ProductQuickView(props){
                             id={product._id}
                             onClick={wishListClick}
                             >
-                            <i class="fa fa-heart" aria-hidden="true"></i>
+                            <i className="fa fa-heart" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div className='product-info-cate flex-center'>

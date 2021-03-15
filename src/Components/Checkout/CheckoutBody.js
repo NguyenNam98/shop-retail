@@ -13,7 +13,7 @@ import {withRouter} from 'react-router-dom';
     const [orderDistrict,setOrderDistrict]=useState('');
     const [orderEmail,setOrderEmail]=useState('');
     const [orderAddress,setOrderAddress]=useState('');
-    const orderTotal=totalItems+shippingFee;
+    const orderTotal=Number(totalItems)+Number(shippingFee);
     const [shipMethod,setShipMethod]=useState(0)
     const [methodPay,setMethodPay]=useState('');
     const list=[];
@@ -157,7 +157,7 @@ import {withRouter} from 'react-router-dom';
                     <div 
                     className='checkoutbody-total'
                     >
-                        {(Number(shippingFee) +Number(totalItems)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") }đ
+                        {(Number(shippingFee)+Number(totalItems)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") }đ
                     </div>
                 </div>
             </div>

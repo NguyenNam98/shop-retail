@@ -129,6 +129,7 @@ function ShopContent(props){
                                         <div 
                                         className="shopcontent-filter-cateLink"
                                         onClick={chooseCateLink}
+                                        key={index}
                                         id={item}
                                         >
                                             {item}

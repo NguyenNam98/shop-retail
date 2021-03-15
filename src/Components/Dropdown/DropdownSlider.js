@@ -45,7 +45,7 @@ import '../Dropdown/DropdownSlider.css'
                                 key={index}
                                 className={index === imgIndex ? "active-dot" : ""}
                             >
-                               <i class="fas fa-circle  icon"></i>
+                               <i className="fas fa-circle "></i>
                             </div>
                         )
                     })

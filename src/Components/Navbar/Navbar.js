@@ -163,7 +163,7 @@ import Login from '../Login/Login';
 
             }
             <div className="navbar-container">
-               <Link to='/' className="nav-logo" onClick={()=>{
+               <Link to='/' className="nav-logo rotate" onClick={()=>{
                    window.scrollTo(0,0)
                }}
                >
@@ -261,11 +261,11 @@ import Login from '../Login/Login';
                <div className='nav-cart'
                 onClick={()=>{setOpenCart(true)}}
                >
-                        <i class="fas fa-cart-plus"></i>
+                        <i className="fas fa-cart-plus"></i>
                         <div className='number'>{numberItems}</div> 
                 </div>
                 
-                <i class="fas fa-user" onClick={()=>{setOpenLogin(true)}}></i>
+                <i className="fas fa-user" onClick={()=>{setOpenLogin(true)}}></i>
                 
             </div>
         </div>

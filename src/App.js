@@ -14,12 +14,13 @@ import Login from './pages/Login/Signup';
 import News from './pages/News/News';
 import Contact from './pages/Contact/Contact';
 
-
 import {CartProvider} from'./Context/Cart';
+import {UserProvider} from './Context/User.context';
 
 function App() {
   return (
     <CartProvider>
+    <UserProvider>
     <Router>
       <div className='App'>
       <Switch>
@@ -38,6 +39,7 @@ function App() {
       </Switch>
       </div>
     </Router>
+    </UserProvider>
     </CartProvider>
   );
 }

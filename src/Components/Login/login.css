@@ -4,9 +4,9 @@
   height: 100vh;
   position: absolute;
   text-align: center;
-  transition: all .3s ease-in;
+ 
   overscroll-behavior: contain;
-  overflow: scroll !important;
+  overflow: hidden !important;
   z-index: 10000;
   padding-top: 20px;
   /* padding-left: 10px; */
@@ -140,4 +140,193 @@ color: #888;
 .fade-out{
     animation-name: fade-out;
     animation-duration: .5s;
+}
+/* Account */
+.account{
+    
+    padding-left: 5%;
+   
+    width: 100%;
+    height: 100%;
+}
+.account-container{
+    display: flex;
+    width: 100%;
+    height: 80vh; 
+  
+}
+.account-left{
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #999;
+    padding-right: 20px;
+}
+.account-avt{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding-left: 10px;
+  border-bottom: 1px solid #999;
+}
+.account-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+}
+.account-name{
+    margin-left: 20px;
+    color: #222;
+    font-size: 18px;
+}
+.account-right{
+ width: 70%;
+}
+.account-tab{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    align-self: center;
+}
+.tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #111;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+
+}
+.tab-active{
+    background-color: #222;
+    color:#fff;
+}
+.tab:hover{
+    background-color: #222;
+    color:#fff;
+}
+.myaccount-right{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;  
+ 
+  
+}
+.myaccount-header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 10px;
+  border-bottom: 1px solid #999;
+  
+}
+.myaccount-title{
+    color: #222;
+    font-size: 20px;
+}
+.myaccount-note{
+    color: #777;
+}
+.myaccount-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 10px;
+  overflow: scroll;
+ height: 60vh;
+ /* padding-top: 80px; */
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+.myaccount-item{
+    padding-top: 10px;
+    display: flex;
+    text-align: start;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.detail-title{
+    font-family: sans-serif;
+    width: 20%;
+    color: #444;
+    font-size: 14px;
+}
+.detail-input{
+    width: 70%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #888;
+    padding-bottom: 10px;
+}
+.detail-input:hover{
+    border-bottom: 2px solid #222;
+}
+.myaccount-btn{
+    display: flex;
+    width: 200px;
+    height: 60px;
+    justify-content: center;
+    background-color: #222;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+.myaccount-btn:hover{
+    background-color: #666;
+}
+/* order */
+.order{
+    width: 60%;
+    height: 100%;
+   
+}
+.order-header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 10px;
+    border-bottom: 1px solid #999;
+}
+.header-title{
+    color: #222;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.header-note{
+    color: #777;
+}
+.order-tab{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+.order-list{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 20px;
 }
