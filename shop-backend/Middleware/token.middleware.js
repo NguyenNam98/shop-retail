@@ -4,7 +4,7 @@ const jwt =require('jsonwebtoken');
 module.exports.verifyJwt= function(req,res,next){
     const token= req.headers["x-access-token"];
     if(!token){
-      res.send("need a token!")
+      res.json({auth:false, message:"you need a token"})
     }else
       jwt.verify(token,"jwtsecret",(err,decoded)=>{
         if(err){
@@ -12,6 +12,7 @@ module.exports.verifyJwt= function(req,res,next){
         }
         else{
           req.userId=decoded.id;
+          
           next();
         }
     })

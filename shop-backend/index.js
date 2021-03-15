@@ -43,17 +43,17 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-app.use(
-  session({
-    key: "userId",
-    secret: "michaelnam",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      expires: 60 * 60 * 24,
-    },
-  })
-);
+// app.use(
+//   session({
+//     key: "userId",
+//     secret: "michaelnam",
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//       expires: 60 * 60 * 24,
+//     },
+//   })
+// );
 
 // const verifyJwt=(req,res,next)=>{
 //   const token= req.headers["x-access-token"];

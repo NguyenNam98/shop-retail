@@ -65,3 +65,8 @@ if(orderLegnth){
         res.status(200).send("ok");
 }
 }
+module.exports.getOrder= async function(req,res){
+
+   var items= await order.find();
+   res.json(items)
+}
