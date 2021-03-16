@@ -36,6 +36,7 @@ function App() {
         <Route path='/signup' exact component={Login}/>
         <Route path='/news' exact component={News}/>
         <Route path='/contact' exact component={Contact}/>
+        <Route path='/news/:id' exact component={News}/>
       </Switch>
       </div>
     </Router>
