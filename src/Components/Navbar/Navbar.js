@@ -178,7 +178,6 @@ import Login from '../Login/Login';
                       <Link
                         onClick={closeMobileMenu,()=>{ window.scrollTo(0,0)}}
                         to='/' className='nav-links'
-                     
                        >
                            Home 
                        </Link>

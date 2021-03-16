@@ -35,8 +35,8 @@
    
 
   0%{transform:translatey(-300px)}
-  40%{transform:translatey(200px)}
-  70% {transform:translatey(-100px)}
+  50%{transform:translatey(200px)}
+
 
   100%{transform:translatey(0px)}
 }
