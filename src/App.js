@@ -13,6 +13,7 @@ import Checkout from './pages/Checkout/Checkout';
 import Login from './pages/Login/Signup';
 import News from './pages/News/News';
 import Contact from './pages/Contact/Contact';
+import ChatBtn from './Components/ChatBtn';
 
 import {CartProvider} from'./Context/Cart';
 import {UserProvider} from './Context/User.context';
@@ -38,6 +39,7 @@ function App() {
         <Route path='/contact' exact component={Contact}/>
         <Route path='/news/:id' exact component={News}/>
       </Switch>
+      <ChatBtn/>
       </div>
     </Router>
     </UserProvider>

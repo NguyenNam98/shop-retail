@@ -7,6 +7,7 @@ import DropDown from '../Dropdown/Dropdown';
 import {CartContext} from '../../Context/Cart';
 import Cart from '../Cart/Cart';
 import Login from '../Login/Login';
+import Search from './Search';
 
  function Navbar(){
      const {cartItems} = useContext(CartContext);
@@ -18,6 +19,9 @@ import Login from '../Login/Login';
      const [openCart,setOpenCart ]=useState(false);
      const setCloseCart=()=>{setOpenCart(false)};
      const [tab,setTab]=useState(1);
+
+     const[openSearch,setOpenSearch]= useState(false);
+     const closeSearch=()=>{setOpenSearch(false)};
 
      const [openLogin,setOpenLogin] =useState(false);
      const setCloseLogin=()=>{setOpenLogin(false)};
@@ -160,7 +164,11 @@ import Login from '../Login/Login';
                 />
             }
             {
-
+                openSearch===true&&
+                <Search 
+                openSearch={openSearch}
+                closeSearch={closeSearch}
+                />
             }
             <div className="navbar-container">
                <Link to='/' className="nav-logo rotate" onClick={()=>{
@@ -250,12 +258,12 @@ import Login from '../Login/Login';
                       <Link to='/signup' className='nav-links-mobile' onClick={closeMobileMenu}>Sign up</Link>
                   </li>
                </ul>
-               <form className='nav-search'>             
-                   <Link to='search' className='nav-input'> 
-                       <input type='text' placeholder="Search.." >
+               <form className='nav-search'onClick={()=>{setOpenSearch(true)}}>             
+                   <div  className='nav-input'> 
+                       <input type='text' placeholder="Search.." value='' >
                        </input>
-                    </Link>
-                   <i className="fas fa-search"></i>
+                    </div>
+                   <i className="fas fa-search search-icon"></i>
                 </form>
                <div className='nav-cart'
                 onClick={()=>{setOpenCart(true)}}

@@ -28,7 +28,9 @@
     font-size: 26px;
     color: #666;
 }
-
+.displaynone{
+    display: none;
+}
 .tab-login{
     color: #888;
     font-size: 22px;
